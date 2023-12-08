@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmetics Website - Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop All</a></li>
+        <li><a href="lipsticks.html">Lipsticks</a></li>
+        <li><a href="lipglosses.html">Lip Glosses</a></li>
+        <li><a href="about.html">About Our Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contact-section">
+      <h1>Contact Us</h1>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" id="submit-button">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Cosmetics Website. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // JavaScript for Contact.html
+    const contactForm = document.getElementById('contact-form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const submitButton = document.getElementById('submit-button');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = {
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value
+      };
+      console.log(formData); // Replace with your desired action (e.g., sending the form data to a server)
+      contactForm.reset();
+      alert('Message sent successfully!');
+    });
+  </script>
+</body>
+</html>

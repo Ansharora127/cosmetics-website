@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmetics Website - Lip Glosses</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop All</a></li>
+        <li><a href="lipsticks.html">Lipsticks</a></li>
+        <li><a href="lipglosses.html">Lip Glosses</a></li>
+        <li><a href="about.html">About Our Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Lip Glosses</h1>
+
+    <section class="product-list">
+      <div class="product">
+        <img src="lp1.jpg" alt="Lip Gloss 1">
+        <h3>Fenty Beauty Gloss Bomb</h3>
+        <p>in shade vampire blood (cream)</p>
+        <p>Rs 2100</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="lp2.jpg" alt="Lip Gloss 2">
+        <h3>Fenty Beauty Gloss Bomb</h3>
+        <p>in shade red fire (heat)</p>
+        <p>Rs 2000</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="lp3.jpg" alt="Lip Gloss 3">
+        <h3>Fenty Beauty Gloss Bomb</h3>
+        <p>in shade pink nude (heat)</p>
+        <p>Rs 2100</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="lp4.jpg" alt="Lip Gloss 3">
+        <h3>Fenty Beauty Gloss Bomb</h3>
+        <p>in shade brown nude (cream)</p>
+        <p>Rs 2100</p>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Cosmetics Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    if (document.title === 'Cosmetics Website - Lip Glosses') {
+      const addToCartButtons = document.querySelectorAll('.product button');
+
+      addToCartButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const productName = button.parentNode.querySelector('h3').textContent;
+          alert(`Added ${productName} to cart!`);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

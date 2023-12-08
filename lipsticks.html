@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmetics Website - Lipsticks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop All</a></li>
+        <li><a href="lipsticks.html">Lipsticks</a></li>
+        <li><a href="lipglosses.html">Lip Glosses</a></li>
+        <li><a href="about.html">About Our Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Lipsticks</h1>
+
+    <section class="product-list">
+      <div class="product">
+        <img src="ls4.jpg" alt="Lipstick 1">
+        <h3>Crashed lip color</h3>
+        <p>A medium blue pink</p>
+        <p>Rs 2200</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="ls5.jpg" alt="Lipstick 2">
+        <h3>Crashed lip color</h3>
+        <p>A medium warm berry</p>
+        <p>Rs 2200</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="ls6.jpg" alt="Lipstick 3">
+        <h3>Crashed lip color</h3>
+        <p>A deeper mauve</p>
+        <p>Rs 2200</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="ls7.jpg" alt="Lipstick 4">
+        <h3>CRUSHED LIP COLOR</h3>
+        <p>A bright pink coral</p>
+        <p>Rs 2200</p>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Cosmetics Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    if (document.title === 'Cosmetics Website - Lipsticks') {
+      const addToCartButtons = document.querySelectorAll('.product button');
+
+      addToCartButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const productName = button.parentNode.querySelector('h3').textContent;
+          alert(`Added ${productName} to cart!`);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
